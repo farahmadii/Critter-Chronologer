@@ -1,5 +1,6 @@
-package com.udacity.jdnd.course3.critter.schedule;
+package com.farzan.critter.controller;
 
+import com.farzan.critter.schedule.ScheduleDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

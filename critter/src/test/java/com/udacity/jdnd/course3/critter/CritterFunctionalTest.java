@@ -1,12 +1,17 @@
-package com.udacity.jdnd.course3.critter;
+package com.farzan.critter;
 
+import com.farzan.critter.controller.ScheduleController;
+import com.farzan.critter.pet.PetType;
+import com.farzan.critter.schedule.ScheduleDTO;
+import com.farzan.critter.user.CustomerDTO;
+import com.farzan.critter.user.EmployeeDTO;
+import com.farzan.critter.user.EmployeeRequestDTO;
+import com.farzan.critter.user.EmployeeSkill;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.udacity.jdnd.course3.critter.pet.PetController;
-import com.udacity.jdnd.course3.critter.pet.PetDTO;
-import com.udacity.jdnd.course3.critter.pet.PetType;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleController;
-import com.udacity.jdnd.course3.critter.schedule.ScheduleDTO;
+import com.farzan.critter.controller.PetController;
+import com.farzan.critter.controller.UserController;
+import com.farzan.critter.pet.PetDTO;
 import com.udacity.jdnd.course3.critter.user.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
