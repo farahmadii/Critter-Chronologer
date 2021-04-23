@@ -1,4 +1,4 @@
-package com.farzan.critter;
+package com.udacity.jdnd.course3.critter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
