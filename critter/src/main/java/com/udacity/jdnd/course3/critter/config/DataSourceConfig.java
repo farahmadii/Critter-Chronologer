@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
-    @Bean
-    @ConfigurationProperties(prefix="spring.datasource")
+//    @Bean
+//    @ConfigurationProperties(prefix="spring.datasource")
     public DataSource getDatasource(){
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.url("jdbc:mysql://localhost:3306/petclinic");
