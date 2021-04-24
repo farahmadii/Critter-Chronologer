@@ -26,12 +26,13 @@ public class PetService {
         return petRepository.save(pet);
     }
 
+    // finding the pet with the given id, and if it's not already recorded in DB throw proper exception
     public Pet getPetByPetId(Long petId){
         Optional<Pet> optionalPet = this.petRepository.findById(petId);
         if(optionalPet.isPresent()){
             return optionalPet.get();
         }
-        return optionalPet.orElseThrow(ResourceNotFoundException::new);
+        return optionalPet.orElseThrow(() -> new ResourceNotFoundException("Pet with id: "+ petId + " not found"));
     }
 
     public List<Pet> getPetsOfAnOwner(Long ownerId){
