@@ -30,7 +30,7 @@ public class PetController {
     public PetDTO savePet(@RequestBody PetDTO petDTO) {
         Owner owner = null;
 
-        if ((Long)petDTO.getOwnerId() != null) {
+        if (petDTO.getOwnerId() != 0) {
             owner = this.userService.findOwnerById(petDTO.getOwnerId());
         }
 
