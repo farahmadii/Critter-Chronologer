@@ -30,20 +30,22 @@ public class UserService {
     OwnerRepository ownerRepository;
 
     public Owner saveCustomer(Owner owner){
-        return this.userRepository.save(owner);
+        return this.ownerRepository.save(owner);
     }
 
     public Employee saveEmployee(Employee employee){
-    return this.userRepository.save(employee);
+    return this.employeeRepository.save(employee);
     }
 
+
+    // finding the employee with the given id, and if it's not already recorded in DB throw proper exception
     public Employee findEmployeeById(Long id){
         Optional<Employee> optionalEmployee = this.employeeRepository.findById(id);
         if(optionalEmployee.isPresent()){
             Employee employee = optionalEmployee.get();
             return employee;
         }
-        return optionalEmployee.orElseThrow(ResourceNotFoundException::new);
+        return optionalEmployee.orElseThrow(() -> new ResourceNotFoundException("Employee with id: "+ id + " not found"));
     }
 
     public Owner findOwnerById(Long id){
