@@ -36,14 +36,16 @@ public class ScheduleService {
     }
 
     public List<Schedule> getSchedulesByPetId(Long petId){
+
         return this.scheduleRepository.getScheduleByPets_Id(petId);
     }
 
+    // finding the customer with the given id, and if it's not already recorded in DB throw proper exception
     public List<Schedule> getScheduleByOwner(Long ownerId) {
         Optional<Owner> optionalOwner = this.ownerRepository.findById(ownerId);
 
         if (!optionalOwner.isPresent()) {
-            throw new ResourceNotFoundException();
+            throw new ResourceNotFoundException("No schedule found for the given owner id: "+ ownerId);
         }
         else{
             Owner customer = optionalOwner.get();
