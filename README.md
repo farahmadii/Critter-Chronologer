@@ -9,10 +9,9 @@ Finally I've integration tested the app with SpringBootTest. Usual API calls can
 
 ### Dependencies
 
-* [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download) (or Ultimate) recommended 
 * [Java SE Development Kit 8+](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [Maven](https://maven.apache.org/download.cgi)
-* [MySQL Server 8](https://dev.mysql.com/downloads/mysql/) (or another standalone SQL instance)
+* [MySQL Server 8](https://dev.mysql.com/downloads/mysql/)
 * [Postman](https://www.getpostman.com/downloads/)
 
 ### Postman
