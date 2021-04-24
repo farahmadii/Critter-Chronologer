@@ -8,9 +8,6 @@ import lombok.Setter;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
-import java.time.DayOfWeek;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
